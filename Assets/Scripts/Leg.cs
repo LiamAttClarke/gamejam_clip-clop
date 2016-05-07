@@ -26,6 +26,7 @@ public class Leg : MonoBehaviour {
 	
 	}
 
+	// sign of speed determines direction of movement
 	public void SetMotorSpeed (LegType legType, float speed) {
 		JointMotor2D motor;
 		switch (legType) {
@@ -44,6 +45,7 @@ public class Leg : MonoBehaviour {
 		}
 	}
 
+	// sign of speed determines direction of movement
 	public float GetMotorSpeed (LegType legType) {
 		float motorSpeed = 0;
 		switch (legType) {
