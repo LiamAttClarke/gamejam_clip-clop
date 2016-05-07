@@ -9,6 +9,7 @@ public class Leg : MonoBehaviour {
 	public GameObject upperLeg { get; private set; }
 
 	HingeJoint2D lowerHinge, upperHinge;
+	float maxHingeSpeed = 150f;
 
 	void Awake () {
 		lowerLeg = transform.Find ("Lower").gameObject;
@@ -26,38 +27,31 @@ public class Leg : MonoBehaviour {
 	
 	}
 
-	// sign of speed determines direction of movement
-	public void SetMotorSpeed (LegType legType, float speed) {
+	// Set leg position [0, 1]
+	public void MoveToPosition (LegType legType, float percent) {
+		percent = Mathf.Clamp (percent, 0, 1f);
+		HingeJoint2D hinge = null;
 		JointMotor2D motor;
-		switch (legType) {
-		case LegType.Lower:
-			if (lowerHinge == null) throw new UnityException ("Lower Hinge is null");
-			motor = lowerHinge.motor;
-			motor.motorSpeed = speed;
-			lowerHinge.motor = motor;
-			break;
-		case LegType.Upper:
-			if (upperHinge == null) throw new UnityException ("Upper Hinge is null");
-			motor = upperHinge.motor;
-			motor.motorSpeed = speed;
-			upperHinge.motor = motor;
-			break;
+		if (legType == LegType.Lower) {
+			hinge = lowerHinge;
+		} else if (legType == LegType.Upper) {
+			hinge = upperHinge;
 		}
-	}
+			
+		if (hinge == null)
+			throw new UnityException ("Hinge is missing");
 
-	// sign of speed determines direction of movement
-	public float GetMotorSpeed (LegType legType) {
-		float motorSpeed = 0;
-		switch (legType) {
-		case LegType.Lower:
-			if (lowerHinge == null) throw new UnityException ("Lower Hinge is null");
-			motorSpeed = lowerHinge.motor.motorSpeed;
-			break;
-		case LegType.Upper:
-			if (upperHinge == null) throw new UnityException ("Upper Hinge is null");
-			motorSpeed = upperHinge.motor.motorSpeed;
-			break;
+		motor = hinge.motor;
+		float desiredAngle = Mathf.Lerp (hinge.limits.min, hinge.limits.max, percent);
+		float diff = Mathf.Abs (desiredAngle - hinge.jointAngle) / hinge.limits.max;
+		if (hinge.jointAngle < desiredAngle) {
+			motor.motorSpeed = diff * maxHingeSpeed;
+		} else if (lowerHinge.jointAngle > desiredAngle) {
+			motor.motorSpeed = diff * -maxHingeSpeed;
+		} else {
+			motor.motorSpeed = 0;
 		}
-		return motorSpeed;
+
+		hinge.motor = motor;
 	}
 }

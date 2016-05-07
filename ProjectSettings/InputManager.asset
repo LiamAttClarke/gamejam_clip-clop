@@ -13,9 +13,9 @@ InputManager:
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 100
+    gravity: 0
     dead: 0
-    sensitivity: 100
+    sensitivity: 10
     snap: 0
     invert: 0
     type: 2
@@ -26,28 +26,28 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: joystick button 13
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 100
+    gravity: 0
     dead: 0
-    sensitivity: 100
+    sensitivity: 10
     snap: 0
     invert: 0
-    type: 0
-    axis: 12
+    type: 2
+    axis: 4
     joyNum: 2
   - serializedVersion: 3
     m_Name: Front_RL
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: d
-    positiveButton: e
+    negativeButton: 
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 100
+    gravity: 0
     dead: 0
-    sensitivity: 100
+    sensitivity: 10
     snap: 0
     invert: 0
     type: 2
@@ -58,28 +58,28 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: joystick button 14
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 100
+    gravity: 0
     dead: 0
-    sensitivity: 100
+    sensitivity: 10
     snap: 0
     invert: 0
-    type: 0
-    axis: 13
+    type: 2
+    axis: 5
     joyNum: 2
   - serializedVersion: 3
     m_Name: Back_LL
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: h
-    positiveButton: u
+    negativeButton: 
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 100
+    gravity: 0
     dead: 0
-    sensitivity: 100
+    sensitivity: 10
     snap: 0
     invert: 0
     type: 2
@@ -89,29 +89,29 @@ InputManager:
     m_Name: Back_LU
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: j
-    positiveButton: i
+    negativeButton: 
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 100
+    gravity: 0
     dead: 0
-    sensitivity: 100
+    sensitivity: 10
     snap: 0
     invert: 0
     type: 2
-    axis: 0
+    axis: 4
     joyNum: 0
   - serializedVersion: 3
     m_Name: Back_RL
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: k
-    positiveButton: o
+    negativeButton: 
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 100
+    gravity: 0
     dead: 0
-    sensitivity: 100
+    sensitivity: 10
     snap: 0
     invert: 0
     type: 2
@@ -121,15 +121,15 @@ InputManager:
     m_Name: Back_RU
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: l
-    positiveButton: p
+    negativeButton: 
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 100
+    gravity: 0
     dead: 0
-    sensitivity: 100
+    sensitivity: 10
     snap: 0
     invert: 0
     type: 2
-    axis: 0
+    axis: 5
     joyNum: 0
