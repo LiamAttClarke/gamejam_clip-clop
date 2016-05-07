@@ -14,7 +14,7 @@ public class Player : MonoBehaviour {
 	Leg leftLeg, rightLeg;
 
 	void Awake () {
-		//leftLeg = transform.Find ("Left Leg").GetComponent<Leg>();
+		leftLeg = transform.Find ("Left Leg").GetComponent<Leg>();
 		rightLeg = transform.Find ("Right Leg").GetComponent<Leg>();
 
 		switch (playerType) {
@@ -38,6 +38,8 @@ public class Player : MonoBehaviour {
 	}
 	
 	void Update () {
+		leftLeg.SetMotorSpeed (LegType.Lower, Input.GetAxis (inputLL) * legSpeed);
+		leftLeg.SetMotorSpeed (LegType.Upper, Input.GetAxis (inputLU) * legSpeed);
 		rightLeg.SetMotorSpeed (LegType.Lower, Input.GetAxis (inputRL) * legSpeed);
 		rightLeg.SetMotorSpeed (LegType.Upper, Input.GetAxis (inputRU) * legSpeed);
 	}
