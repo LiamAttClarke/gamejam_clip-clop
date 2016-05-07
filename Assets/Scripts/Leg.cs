@@ -9,7 +9,7 @@ public class Leg : MonoBehaviour {
 	public GameObject upperLeg { get; private set; }
 
 	HingeJoint2D lowerHinge, upperHinge;
-	float maxHingeSpeed = 150f;
+	float maxHingeSpeed = 250f;
 
 	void Awake () {
 		lowerLeg = transform.Find ("Lower").gameObject;

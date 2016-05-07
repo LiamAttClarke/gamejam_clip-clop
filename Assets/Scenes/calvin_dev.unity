@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundSpeed: 0.1
-  midgroundSpeed: 0.5
+  midgroundSpeed: 1
 --- !u!4 &1219675803
 Transform:
   m_ObjectHideFlags: 0
