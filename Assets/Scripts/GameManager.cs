@@ -6,13 +6,8 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		var joysticks = Input.GetJoystickNames ();
-		foreach (var joystick in joysticks) {
-			Debug.Log (joystick);
+		for (int i = 0; i < joysticks.Length; i++) {
+			Debug.Log (i + " : " + joysticks[i]);
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }

@@ -5,13 +5,24 @@ public enum PlayerType { Front, Back }
 
 public class Player : MonoBehaviour {
 
-	public PlayerType playerType = PlayerType.Front;
-	public float legSpeed = 1.0f;
+	struct InputBinding {
+		public string LL;
+		public string LU;
+		public string RL;
+		public string RU;
+		public InputBinding (string LL, string LU, string RL, string RU) {
+			this.LL = LL;
+			this.LU = LU;
+			this.RL = RL;
+			this.RU = RU;
+		}
+	}
 
-	// input names
-	string inputLL, inputLU, inputRL, inputRU;
+	public PlayerType playerType = PlayerType.Front;
 
 	Leg leftLeg, rightLeg;
+
+	InputBinding inputBindings;
 
 	void Awake () {
 		leftLeg = transform.Find ("Left Leg").GetComponent<Leg>();
@@ -19,28 +30,22 @@ public class Player : MonoBehaviour {
 
 		switch (playerType) {
 		case PlayerType.Front:
-			inputLL = "Front_LL";
-			inputLU = "Front_LU";
-			inputRL = "Front_RL";
-			inputRU = "Front_RU";
+			inputBindings = new InputBinding ("Front_LL", "Front_LU", "Front_RL", "Front_RU");
 			break;
 		case PlayerType.Back:
-			inputLL = "Back_LL";
-			inputLU = "Back_LU";
-			inputRL = "Back_RL";
-			inputRU = "Back_RU";
+			inputBindings = new InputBinding ("Back_LL", "Back_LU", "Back_RL", "Back_RU");
 			break;
 		}
 	}
 
 	void Start () {
-		
+
 	}
 	
 	void Update () {
-		leftLeg.SetMotorSpeed (LegType.Lower, Input.GetAxis (inputLL) * legSpeed);
-		leftLeg.SetMotorSpeed (LegType.Upper, Input.GetAxis (inputLL) * legSpeed);
-		rightLeg.SetMotorSpeed (LegType.Lower, Input.GetAxis (inputRL) * legSpeed);
-		rightLeg.SetMotorSpeed (LegType.Upper, Input.GetAxis (inputRL) * legSpeed);
+		leftLeg.MoveToPosition ( LegType.Lower, (Input.GetAxis (inputBindings.LL) + 1f) * 0.5f);
+		leftLeg.MoveToPosition ( LegType.Upper, (Input.GetAxis (inputBindings.LL) + 1f) * 0.5f);
+		rightLeg.MoveToPosition ( LegType.Lower, (Input.GetAxis (inputBindings.RL) + 1f) * 0.5f);
+		rightLeg.MoveToPosition ( LegType.Upper, (Input.GetAxis (inputBindings.RL) + 1f) * 0.5f);
 	}
 }
