@@ -4,8 +4,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
+	GameObject currentScreen;
 
-	GameObject splashScreen;
+	public GameObject mainMenu;
+	public GameObject options;
+	public GameObject credits;
 
 	// Use this for initialization
 	void Start () {
@@ -13,27 +16,40 @@ public class GameManager : MonoBehaviour {
 		for (int i = 0; i < joysticks.Length; i++) {
 			Debug.Log (i + " : " + joysticks[i]);
 		}
-		splashScreen = GameObject.Find ("SplashScreen");
+		//mainMenu = GameObject.Find ("MainMenu");
+		//options = GameObject.Find ("Options");
+		print (options == null);
+		options.SetActive (false);
+		currentScreen = mainMenu;
+		currentScreen.SetActive (true);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
-
-	public void LoadSplashScreen() {
-
-	}
-
+	
 	public void LoadGame() {
-		
+		SceneManager.LoadScene ("Game");	
 	}
 
 	public void LoadOptions() {
-		
+		currentScreen.SetActive (false);
+		currentScreen = options;
+		currentScreen.SetActive (true);
 	}
 
 	public void LoadMainMenu() {
+		currentScreen.SetActive (false);
+		currentScreen = mainMenu;
+		currentScreen.SetActive (true);
 		
+	}
+
+	public void LoadCredits() {
+
+		currentScreen.SetActive (false);
+		currentScreen = credits;
+		currentScreen.SetActive (true);
 	}
 }
