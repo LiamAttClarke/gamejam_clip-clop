@@ -43,7 +43,6 @@ public class Player : MonoBehaviour {
 	}
 	
 	void Update () {
-		Debug.Log (Input.GetAxis (inputBindings.LL));
 		leftLeg.MoveToPosition ( LegType.Lower, (Input.GetAxis (inputBindings.LL) + 1f) * 0.5f);
 		leftLeg.MoveToPosition ( LegType.Upper, (Input.GetAxis (inputBindings.LL) + 1f) * 0.5f);
 		rightLeg.MoveToPosition ( LegType.Lower, (Input.GetAxis (inputBindings.RL) + 1f) * 0.5f);
