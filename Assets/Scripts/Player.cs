@@ -39,8 +39,8 @@ public class Player : MonoBehaviour {
 	
 	void Update () {
 		leftLeg.SetMotorSpeed (LegType.Lower, Input.GetAxis (inputLL) * legSpeed);
-		leftLeg.SetMotorSpeed (LegType.Upper, Input.GetAxis (inputLU) * legSpeed);
+		leftLeg.SetMotorSpeed (LegType.Upper, Input.GetAxis (inputLL) * legSpeed);
 		rightLeg.SetMotorSpeed (LegType.Lower, Input.GetAxis (inputRL) * legSpeed);
-		rightLeg.SetMotorSpeed (LegType.Upper, Input.GetAxis (inputRU) * legSpeed);
+		rightLeg.SetMotorSpeed (LegType.Upper, Input.GetAxis (inputRL) * legSpeed);
 	}
 }

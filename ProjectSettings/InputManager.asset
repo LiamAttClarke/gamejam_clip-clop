@@ -9,8 +9,8 @@ InputManager:
     m_Name: Front_LL
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: a
-    positiveButton: q
+    negativeButton: 
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
     gravity: 100
@@ -19,14 +19,14 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 0
-    joyNum: 0
+    axis: 4
+    joyNum: 1
   - serializedVersion: 3
     m_Name: Front_LU
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: s
-    positiveButton: w
+    negativeButton: 
+    positiveButton: joystick button 13
     altNegativeButton: 
     altPositiveButton: 
     gravity: 100
@@ -34,9 +34,9 @@ InputManager:
     sensitivity: 100
     snap: 0
     invert: 0
-    type: 2
-    axis: 0
-    joyNum: 0
+    type: 0
+    axis: 12
+    joyNum: 2
   - serializedVersion: 3
     m_Name: Front_RL
     descriptiveName: 
@@ -51,14 +51,14 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 0
-    joyNum: 0
+    axis: 5
+    joyNum: 1
   - serializedVersion: 3
     m_Name: Front_RU
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: f
-    positiveButton: r
+    negativeButton: 
+    positiveButton: joystick button 14
     altNegativeButton: 
     altPositiveButton: 
     gravity: 100
@@ -66,9 +66,9 @@ InputManager:
     sensitivity: 100
     snap: 0
     invert: 0
-    type: 2
-    axis: 0
-    joyNum: 0
+    type: 0
+    axis: 13
+    joyNum: 2
   - serializedVersion: 3
     m_Name: Back_LL
     descriptiveName: 
@@ -83,8 +83,8 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 0
-    joyNum: 0
+    axis: 4
+    joyNum: 2
   - serializedVersion: 3
     m_Name: Back_LU
     descriptiveName: 
@@ -115,8 +115,8 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 0
-    joyNum: 0
+    axis: 5
+    joyNum: 2
   - serializedVersion: 3
     m_Name: Back_RU
     descriptiveName: 
