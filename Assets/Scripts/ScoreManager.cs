@@ -13,6 +13,9 @@ public class ScoreManager : MonoBehaviour {
 	public static string highScorePath;
 	public static string lowScorePath;
 
+	HighScorePanel highScorePanel;
+	LowScorePanel lowScorePanel;
+
 
 	void Awake() {
 		highScorePath = System.IO.Path.Combine(Application.dataPath, "HighScores.xml");
@@ -24,14 +27,21 @@ public class ScoreManager : MonoBehaviour {
 			using (StreamWriter file = new StreamWriter(File.Create(ScoreManager.highScorePath))) ;
 		}
 		highScores = new ScoreList();
+		highScores.highScore = true;
 		lowScores = new ScoreList();
+		lowScores.highScore = false;
 		Read();
 		Write();
+
+		highScorePanel = GameObject.Find ("HighScorePanel").GetComponent<HighScorePanel> ();
+		lowScorePanel = GameObject.Find ("LowScorePanel").GetComponent<LowScorePanel> ();
+		highScorePanel.WriteScores ();
+		lowScorePanel.WriteScores ();
 	}
 
 	// Use this for initialization
 	void Start () {
-		print (highScores.ToString());
+		//highScores.print ();
 	}
 	
 	// Update is called once per frame

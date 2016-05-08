@@ -15,9 +15,10 @@ public class LowScorePanel : MonoBehaviour {
 	}
 
 	public void WriteScores() {
-		for (int i = 0; i < scoreBoxes.Length; i++) {
-			Score tmp = ScoreManager.lowScores.list [i];
-			scoreBoxes [i].GetComponent<ScoreBox> ().SetText (i, tmp.name, tmp.distance);
+		for (int i = 0; i < scoreBoxes.Length ; i++) {
+			Score tmp = ScoreManager.lowScores.list [4 - i];
+			print("filling");
+			scoreBoxes [i].GetComponent<ScoreBox> ().SetText (i+1, tmp.name, tmp.distance);
 		}
 	}
 }

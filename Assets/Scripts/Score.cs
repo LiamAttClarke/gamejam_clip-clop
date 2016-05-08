@@ -10,6 +10,7 @@ public class Score : IComparable {
 	[XmlAttribute("distance")]
 	public int distance;
 
+
 	public Score() {}
 
 	public Score(string name, int distance) {
