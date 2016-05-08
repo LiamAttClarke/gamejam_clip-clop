@@ -28,7 +28,9 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update() {
-        distance.text = Mathf.FloorToInt(target.transform.position.x).ToString();
+        if (!isGameOver) {
+            distance.text = Mathf.FloorToInt(target.transform.position.x).ToString();        
+        }
     }
 
     public void EndGame() {

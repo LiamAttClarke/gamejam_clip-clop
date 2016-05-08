@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Horse : MonoBehaviour {
 
-    public float speed { get; set; }
+    float speed = 0.15f;
     Transform tran;
 
     void Awake() {
