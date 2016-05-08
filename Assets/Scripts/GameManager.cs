@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour {
     public void EndGame() {
         if (isGameOver) return;
         isGameOver = true;
+        jukebox.Stop();
         jukebox.PlayOneShot(endClip);
         gameOverPanel.SetActive(true);        
     }
