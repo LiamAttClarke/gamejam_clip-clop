@@ -11,4 +11,16 @@ public class SceneLoader : MonoBehaviour {
     public void LoadGame() {
         SceneManager.LoadScene("Game");
     }
+    
+    public void LoadControls() {
+        SceneManager.LoadScene("Controls");    
+    }
+    
+    public void LoadHighscores() {
+        SceneManager.LoadScene("Highscores");    
+    }
+    
+    public void LoadCredits() {
+        SceneManager.LoadScene("Credits");    
+    }
 }
