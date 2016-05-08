@@ -9,7 +9,8 @@ public class Leg : MonoBehaviour {
 	public GameObject upperLeg { get; private set; }
 
 	HingeJoint2D lowerHinge, upperHinge;
-	float maxHingeSpeed = 250f;
+	float maxThighSpeed = 100f;
+	float maxCalfSpeed = 400f;
 
 	void Awake () {
 		lowerLeg = transform.Find ("Lower").gameObject;
@@ -32,10 +33,13 @@ public class Leg : MonoBehaviour {
 		percent = Mathf.Clamp (percent, 0, 1f);
 		HingeJoint2D hinge = null;
 		JointMotor2D motor;
+		float maxHingeSpeed = 0;
 		if (legType == LegType.Lower) {
 			hinge = lowerHinge;
+			maxHingeSpeed = maxCalfSpeed;
 		} else if (legType == LegType.Upper) {
 			hinge = upperHinge;
+			maxHingeSpeed = maxThighSpeed;
 		}
 			
 		if (hinge == null)

@@ -23,8 +23,11 @@ public class Player : MonoBehaviour {
 	Leg leftLeg, rightLeg;
 
 	InputBinding inputBindings;
+	
+	GameManager gameManager;
 
 	void Awake () {
+		gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
 		leftLeg = transform.Find ("Left Leg").GetComponent<Leg>();
 		rightLeg = transform.Find ("Right Leg").GetComponent<Leg>();
 
@@ -37,14 +40,13 @@ public class Player : MonoBehaviour {
 			break;
 		}
 	}
-
-	void Start () {
-	}
 	
-	void Update () {		
-		leftLeg.MoveToPosition ( LegType.Lower, (Input.GetAxis (inputBindings.LL) + 1f) * 0.5f);
-		leftLeg.MoveToPosition ( LegType.Upper, Input.GetButton (inputBindings.LU) ? 1f : 0);
-		rightLeg.MoveToPosition ( LegType.Lower, (Input.GetAxis (inputBindings.RL) + 1f) * 0.5f);
-		rightLeg.MoveToPosition ( LegType.Upper, Input.GetButton (inputBindings.RU) ? 1f : 0);
+	void Update () {
+		if (!gameManager.isGameOver) {
+			leftLeg.MoveToPosition ( LegType.Lower, (Input.GetAxis (inputBindings.LL) + 1f) * 0.5f);
+			leftLeg.MoveToPosition ( LegType.Upper, Input.GetButton (inputBindings.LU) ? 1f : 0);
+			rightLeg.MoveToPosition ( LegType.Lower, (Input.GetAxis (inputBindings.RL) + 1f) * 0.5f);
+			rightLeg.MoveToPosition ( LegType.Upper, Input.GetButton (inputBindings.RU) ? 1f : 0);		
+		}
 	}
 }

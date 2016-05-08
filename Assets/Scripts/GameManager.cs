@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
     public AudioClip startClip, endClip;
     GameObject gameOverPanel;
     AudioSource jukebox;
-    bool isGameOver = false;
+    public bool isGameOver { get; private set;}
 
     Text distance;
 

@@ -12,7 +12,7 @@ public class HorseHead : MonoBehaviour {
     }
 
     void OnCollisionEnter2D(Collision2D other) {
-        if (other.collider.tag == "Ground") {
+        if (other.collider.tag == "Ground" && !gameManager.isGameOver) {
             Instantiate(hitPrefab, other.contacts[0].point, Quaternion.identity);
             gameManager.EndGame();
         }

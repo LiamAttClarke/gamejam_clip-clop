@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 890962083}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &45654271
@@ -156,7 +156,6 @@ GameObject:
   - 4: {fileID: 69251750}
   - 212: {fileID: 69251753}
   - 61: {fileID: 69251752}
-  - 114: {fileID: 69251751}
   m_Layer: 0
   m_Name: Ground (1)
   m_TagString: Ground
@@ -176,19 +175,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 86265422}
   m_RootOrder: 0
---- !u!114 &69251751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 69251749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b77e6e1c458271044bc067f209106aff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sr: {fileID: 0}
-  width: 0
 --- !u!61 &69251752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -197,7 +183,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 69251749}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e97f8acfa48df418d80fca345f1444d3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -258,7 +244,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 86265419}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e97f8acfa48df418d80fca345f1444d3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -496,7 +482,6 @@ GameObject:
   - 4: {fileID: 216590396}
   - 212: {fileID: 216590399}
   - 61: {fileID: 216590398}
-  - 114: {fileID: 216590397}
   m_Layer: 0
   m_Name: Ground (3)
   m_TagString: Ground
@@ -516,19 +501,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 86265422}
   m_RootOrder: 2
---- !u!114 &216590397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 216590395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b77e6e1c458271044bc067f209106aff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sr: {fileID: 0}
-  width: 0
 --- !u!61 &216590398
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1007,7 +979,6 @@ GameObject:
   - 4: {fileID: 375894810}
   - 212: {fileID: 375894813}
   - 61: {fileID: 375894812}
-  - 114: {fileID: 375894811}
   m_Layer: 0
   m_Name: Ground (2)
   m_TagString: Ground
@@ -1027,19 +998,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 86265422}
   m_RootOrder: 1
---- !u!114 &375894811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 375894809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b77e6e1c458271044bc067f209106aff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sr: {fileID: 0}
-  width: 0
 --- !u!61 &375894812
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1367,6 +1325,14 @@ Prefab:
       propertyPath: m_Mass
       value: 0.21345
       objectReference: {fileID: 0}
+    - target: {fileID: 5010648, guid: 74909aa86661543fb9be0e045faed036, type: 2}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073480, guid: 74909aa86661543fb9be0e045faed036, type: 2}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74909aa86661543fb9be0e045faed036, type: 2}
   m_IsPrefabParent: 0
@@ -1470,7 +1436,6 @@ GameObject:
   - 4: {fileID: 652094986}
   - 212: {fileID: 652094989}
   - 61: {fileID: 652094988}
-  - 114: {fileID: 652094987}
   m_Layer: 0
   m_Name: Ground (5)
   m_TagString: Ground
@@ -1490,19 +1455,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 86265422}
   m_RootOrder: 4
---- !u!114 &652094987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 652094985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b77e6e1c458271044bc067f209106aff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sr: {fileID: 0}
-  width: 0
 --- !u!61 &652094988
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1853,15 +1805,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnDown: {fileID: 1661825589}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.47507754, g: 0.7794118, b: 0.37824395, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2097,7 +2049,6 @@ GameObject:
   - 4: {fileID: 1167589929}
   - 212: {fileID: 1167589932}
   - 61: {fileID: 1167589931}
-  - 114: {fileID: 1167589930}
   m_Layer: 0
   m_Name: Ground (6)
   m_TagString: Ground
@@ -2117,19 +2068,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 86265422}
   m_RootOrder: 5
---- !u!114 &1167589930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1167589928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b77e6e1c458271044bc067f209106aff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sr: {fileID: 0}
-  width: 0
 --- !u!61 &1167589931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2138,7 +2076,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1167589928}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e97f8acfa48df418d80fca345f1444d3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -2689,7 +2627,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: RESTART
+  m_Text: 'TRY AGAIN
+
+'
 --- !u!222 &1432511459
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3086,15 +3026,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 890962085}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.47507754, g: 0.7794118, b: 0.37824395, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -3347,7 +3287,6 @@ GameObject:
   - 4: {fileID: 1967335057}
   - 212: {fileID: 1967335060}
   - 61: {fileID: 1967335059}
-  - 114: {fileID: 1967335058}
   m_Layer: 0
   m_Name: Ground (4)
   m_TagString: Ground
@@ -3367,19 +3306,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 86265422}
   m_RootOrder: 3
---- !u!114 &1967335058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1967335056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b77e6e1c458271044bc067f209106aff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sr: {fileID: 0}
-  width: 0
 --- !u!61 &1967335059
 BoxCollider2D:
   m_ObjectHideFlags: 0
