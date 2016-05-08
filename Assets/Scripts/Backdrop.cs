@@ -31,12 +31,10 @@ public class Backdrop : MonoBehaviour {
 
         float deltaPosX = (tran.position - prevPosition).x;
         // update parallax layers
-        for (int i = 0; i < parallaxLayers.Length; i++) {            
+        for (int i = 0; i < parallaxLayers.Length; i++) {
             SpriteRenderer layer = parallaxLayers[i];
             float layerSpeed = parallaxLayerSpeeds[i];
-            Vector2 prevTextureOffset = layer.material.GetTextureOffset("_MainTex");
-            Vector2 offset = new Vector2(deltaPosX * layerSpeed, 0);
-            parallaxLayers[i].material.SetTextureOffset("_MainTex", prevTextureOffset + offset);
+            layer.transform.position = new Vector3(tran.position.x + layerSpeed * deltaPosX, layer.transform.position.y, layer.transform.position.z);
         }
     }
 
