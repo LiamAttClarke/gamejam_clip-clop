@@ -34,7 +34,7 @@ public class Backdrop : MonoBehaviour {
         for (int i = 0; i < parallaxLayers.Length; i++) {
             SpriteRenderer layer = parallaxLayers[i];
             float layerSpeed = parallaxLayerSpeeds[i];
-            layer.transform.position = new Vector3(tran.position.x + layerSpeed * deltaPosX, layer.transform.position.y, layer.transform.position.z);
+            layer.transform.position = new Vector3(tran.position.x - layerSpeed * deltaPosX, layer.transform.position.y, layer.transform.position.z);
         }
     }
 
